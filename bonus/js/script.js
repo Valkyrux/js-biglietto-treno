@@ -9,7 +9,10 @@
 // Finito l’esercizio base, cercate di capire se potete semplificarlo
 
 const pricePerKm = 0.21;
-let travelLength = parseInt(prompt("Inserisci la lunghezza del percorso in km:"));
+let travelLength;
+let i = 0;
+while (isNaN(travelLength)) {
+    travelLength = parseInt(prompt("Inserisci la lunghezza del percorso in km:"));
 let price = travelLength * pricePerKm;
 const adultEta = 18;
 const oldManEta = 65;
