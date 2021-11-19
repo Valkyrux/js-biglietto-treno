@@ -12,11 +12,26 @@ const pricePerKm = 0.21;
 let travelLength;
 let i = 0;
 while (isNaN(travelLength)) {
-    travelLength = parseInt(prompt("Inserisci la lunghezza del percorso in km:"));
+    if (i < 3) {
+        travelLength = parseInt(prompt("Inserisci la lunghezza del percorso in km:"));
+        i++;
+    } else {
+        travelLength = parseInt(prompt("INSERISCI UN NUMERO SCIMMIA:"));
+    }
+}
 let price = travelLength * pricePerKm;
 const adultEta = 18;
 const oldManEta = 65;
-let userEta = parseInt(prompt("Inserisci la tua età:"));
+let userEta;
+i = 0;
+while (isNaN(userEta)) {
+    if (i < 3) {
+        userEta = parseInt(prompt("Inserisci la tua età:"));
+        i++;
+    } else {
+        userEta = parseInt(prompt("INSERISCI UN NUMERO SCIMMIA:"));
+    }
+}
 let discount = 0;
 if (userEta < adultEta) {
     discount = price * 0.2;
